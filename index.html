@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección Temu — Moda, Belleza y Ofertas</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra Superior -->
+
+  <div class="announcement-bar">
+
+    ⚡ Catálogo exclusivo de artículos de belleza y ofertas actualizadas
+
+  </div>
+
+  <!-- Encabezado -->
+
+  <header class="hero-header">
+
+    <div class="header-container">
+
+      <a href="#" class="brand-logo">DRA<span>.RUTH CORDERO</span></a>
+
+      <p class="site-description">
+        Explora nuestra colección seleccionada de artículos variados y accesorios. 
+        Encuentra tus diseños favoritos y cómpralos directo en Temu.
+      </p>
+
+    </div>
+
+  </header>
+
+  <!-- Buscador -->
+
+  <section class="control-panel">
+
+    <div class="panel-container">
+
+      <div class="search-box">
+
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Busca artículos o accesorios..."
+          oninput="filterProducts()"
+        >
+        <button id="clearBtn" onclick="clearSearch()" class="clear-btn" style="display: none;">✕</button>
+
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- Catálogo Principal -->
+
+  <main class="catalog-container">
+
+    <div id="loading" class="loading-state">Cargando catálogo...</div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <div id="noResults" class="no-results" style="display: none;">
+
+      <p>🔍 No se encontraron artículos con esa búsqueda.</p>
+
+      <button onclick="clearSearch()" class="btn-reset">Mostrar todos los artículos</button>
+
+    </div>
+
+  </main>
+
+  <!-- Pie de Página -->
+
+  <footer class="footer">
+
+    <p>© 2026 Ruth Cordero. Todos los derechos reservados.</p>
+
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
